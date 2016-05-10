@@ -4,6 +4,7 @@ angular.module('inputDropdown', []).directive('inputDropdown', [function() {
     '<input type="text"' +
            'name="{{inputName}}"' +
            'placeholder="{{inputPlaceholder}}"' +
+           'class="{{inputClass}}"' +
            'ng-model="inputValue"' +
            'ng-required="inputRequired"' +
            'ng-change="inputChange()"' +
@@ -32,7 +33,8 @@ angular.module('inputDropdown', []).directive('inputDropdown', [function() {
       inputName: '@',
       inputPlaceholder: '@',
       filterListMethod: '&',
-      itemSelectedMethod: '&'
+      itemSelectedMethod: '&',
+      inputClass: '@'
     },
     template: templateString,
     controller: function($scope) {
